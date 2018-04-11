@@ -1,0 +1,31 @@
+//importing bootstrap 
+/* bootstrap was customized by deleting unnessesary scss modules 
+*this compiled version contains: 
+*functions
+*variables
+*mixins
+*reboot
+*grid
+*media
+*utilities
+*/
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "variables";
+@import "header";
+@import "table";
+@import "pagination";
+@import "footer";
+//setting rem to 16px and page font to Open Sans
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+   
+}
+//page bacground with gradient
+.background{
+    background:radial-gradient(circle, white -70%, #1467FF);
+    min-height: 100vh;
+    width: 100%;
+   
+}
+//resizing font for smaller devices

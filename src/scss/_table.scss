@@ -1,0 +1,97 @@
+table{
+    width: 100%;
+    min-width: 0;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: -0.5rem 0.5rem 0.8rem $table-shadow;
+}
+th, td {
+    padding:$cell-padding;
+    text-align: center;
+    border:{
+        left: 1px solid $table-border;
+    }
+}
+thead{
+    tr{
+        background-color: $table-bg!important;
+    }
+}
+th{
+    color:$table-header-col;
+    font-size: $th-font-size;
+    cursor: pointer;
+    
+//rounding top vertices of the table
+    
+        &:first-of-type{
+        border-radius: 5px 0 0 0;
+            border: none;
+        }
+        &:last-of-type{
+            border-radius: 0 5px 0 0;
+        } 
+}
+td{
+    color: $table-header-col;
+    font:{
+        size:$td-font-size;
+        weight: 400;
+    }
+    
+//bolding every odd column of table
+   
+    &:nth-of-type(odd){
+        font-weight: 700; 
+    }
+}
+.table__icon{
+    height: 10px;
+    display: inline;
+    margin-left: 5px;
+}
+
+//setting color of odd and even row of table 
+
+tr:nth-child(even){
+    background-color: $table-bg;
+}
+tr:nth-child(odd){
+    background-color:#ffffff;
+}
+td:first-of-type{
+    border-left: none;
+} 
+
+//rounding down vertices of the table
+
+tr:last-of-type{
+    td:first-of-type{
+         border-radius: 0 0 0 5px;
+    }
+    td:last-of-type{
+         border-radius: 0 0 5px 0;
+    }
+}
+@include media-breakpoint-only(sm){
+    th,td{
+        font-size: 75% !important;
+    }
+}
+@include media-breakpoint-only(xs){
+   
+    th, td{
+        font-size: 45%;
+        text-align: center;
+        padding: 1rem 0.25rem!important;
+    }
+    .table__icon{
+        margin-top: 3px;
+    }
+}
+@include media-breakpoint-up(xl){
+    th, td{padding: 1.1rem;}
+    th{
+        font-size: 1.1rem;
+    }
+    td{ font-size: 1.2rem;}
+}

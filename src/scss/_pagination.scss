@@ -1,0 +1,80 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    user-select: none;
+}
+.pagination__ul{
+    list-style-type: none;
+    
+// reseting user agent stylesheet 
+    
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-padding-start:0;
+    li{
+        display:inline;
+    }
+}
+.pagination__back{
+    cursor: pointer;
+    :hover{filter:$pagination-hov;}
+    p{
+        margin-left: 0.1rem;
+        margin-right: 0.5rem;
+        display: inline;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        
+    }
+}
+.pagination__next{
+    :hover{filter:$pagination-hov;}
+    cursor: pointer;
+    p{
+        margin-right: 0.1rem;
+        margin-left: 0.5rem;
+        display: inline;
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        
+    }
+}
+.pagination__img{
+    height: 10px;
+    display: inline;
+   
+}
+
+.pagination__number{
+    margin:{
+        right: 0.7rem;
+        left:0.7rem;
+        bottom:0;
+        top:0;
+    }
+    display: inline;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $pagination-no-color;
+    vertical-align:middle;
+    cursor: pointer;
+    &:hover{color:$pagination-hov-col;}
+    
+}
+// animating active page number changing 
+@keyframes paginationNo{
+    from{color:$pagination-no-color}
+    to {color:white;}
+}
+.pagination__number--active{
+    filter: none!important;
+    animation-fill-mode: forwards;
+    animation-name: paginationNo;
+    animation-duration: 0.15s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}

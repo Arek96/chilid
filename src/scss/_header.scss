@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+.header__h1 {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+@include media-breakpoint-down(xs){
+    .header__h1{
+        font-size: 1.5rem;
+    }
+}
