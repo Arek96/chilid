@@ -1,11 +1,9 @@
 # chilid
-This is a recruitment task repozitory. 
-Recruitment to an intern in Chilid.
+This is a recruitment task repozitory.  
+In dist folder you can find compiled and ready to use app files  
+In src folder you can find scss files 
 
-Technologies used to build this one page web app:
-*Bootstrap
-*jQuery
-*Gulp
-*Sass
 
-Author Arkadiusz Osoba
+
+Author:  
+Arkadiusz Osoba
